@@ -1,0 +1,28 @@
+import numpy as np
+
+
+# Disease severity calculation
+
+
+def calculate_severity(infected_pixels, total_pixels):
+severity = (infected_pixels / total_pixels) * 100
+return severity
+
+
+# Example usage
+infected_pixels = 4500
+total_pixels = 256 * 256
+
+
+severity = calculate_severity(infected_pixels, total_pixels)
+
+
+if severity < 10:
+level = "Low"
+elif severity < 30:
+level = "Medium"
+else:
+level = "High"
+
+
+print("Disease Severity:", level)
