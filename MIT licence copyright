@@ -1,0 +1,83 @@
+---
+
+
+## 🌍 Impact
+SmartSpray promotes:
+- Reduced chemical overuse
+- Cost-efficient farming
+- Improved crop yield
+- Environmentally sustainable agriculture
+
+
+---
+
+
+## 📌 Final Tips for SIH GitHub Submission
+✅ Clean folder structure
+✅ Clear README & documentation
+✅ Screenshots + demo video link
+✅ Model + hardware explanation
+✅ Proper commit history
+
+
+---
+
+
+**⭐ If this repository helped you, don’t forget to star it!**
+
+
+
+
+
+
+---
+
+
+## 🧾 Extracted Model & Image Processing Code (From Submitted SIH PDF)
+
+
+Below is the **cleaned and structured code** extracted from your submitted model document, ready to be directly placed into your GitHub project.
+
+
+---
+
+
+## 📁 image_processing/leaf_disease_detection.py
+
+
+```python
+import cv2
+import numpy as np
+
+
+# Load image
+image = cv2.imread('leaf.jpg')
+resized = cv2.resize(image, (256, 256))
+
+
+# Convert to HSV
+hsv = cv2.cvtColor(resized, cv2.COLOR_BGR2HSV)
+
+
+# Define green color range (healthy leaf)
+lower_green = np.array([25, 40, 40])
+upper_green = np.array([85, 255, 255])
+
+
+mask_green = cv2.inRange(hsv, lower_green, upper_green)
+
+
+# Infected regions (non-green areas)
+infected_mask = cv2.bitwise_not(mask_green)
+
+
+# Noise removal
+kernel = np.ones((5, 5), np.uint8)
+infected_mask = cv2.morphologyEx(infected_mask, cv2.MORPH_OPEN, kernel)
+
+
+# Display results
+cv2.imshow('Original Image', resized)
+cv2.imshow('Infected Region', infected_mask)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
