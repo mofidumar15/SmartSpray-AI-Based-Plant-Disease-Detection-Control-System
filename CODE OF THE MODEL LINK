@@ -1,0 +1,18 @@
+👨‍💻 Team & Institute
+
+Oriental Institute of Science & Technology
+
+---
+
+
+## 🤖 Model Code Upload Best Practices
+
+
+- **Do not upload large `.h5` or `.pt` files directly** if >100MB
+- Use:
+- Google Drive link
+- GitHub Releases
+- Hugging Face Model Hub
+
+
+Add link inside: https://drive.google.com/file/d/1psnPMB0CEyjlgHp_XI9nAKrxqkwDjcbr/view?usp=sharing
