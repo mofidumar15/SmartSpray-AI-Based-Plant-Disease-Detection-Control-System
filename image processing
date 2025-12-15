@@ -1,0 +1,18 @@
+image_processing/color_texture_analysis.py
+
+
+
+import cv2
+import numpy as np
+
+
+image = cv2.imread('leaf.jpg')
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+
+# Texture analysis using Laplacian
+laplacian = cv2.Laplacian(gray, cv2.CV_64F)
+texture_score = np.mean(np.abs(laplacian))
+
+
+print("Texture Score:", texture_score)
