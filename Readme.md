@@ -50,3 +50,20 @@ https://docs.google.com/document/d/1m4qt_Pd28ICpLHMuk-49uXb6MUK8PbvKoWRWgjT1W3Y/
 pip install -r requirements.txt
 python model/train_model.py
 python iot_control/sprinkler_control.py
+
+
+
+---
+
+
+## 🚿 IoT & Raspberry Pi Notes
+- Clearly mention **GPIO pins** used
+- Add **safety disclaimer** for pesticide control
+- Provide simulation mode if hardware is unavailable
+
+
+---
+
+
+## 📜 License (Recommended)
+Use **MIT License** for academic & open-source projects:
