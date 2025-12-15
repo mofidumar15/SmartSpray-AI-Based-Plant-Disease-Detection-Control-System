@@ -1,0 +1,50 @@
+📂 Recommended GitHub Folder Structure
+SmartSpray-SIH-2025/
+│
+├── 📁 dataset/
+│ ├── raw_images/ # Original plant leaf images
+│ ├── processed_images/ # Preprocessed / segmented images
+│ └── README.md # Dataset source & description
+│
+├── 📁 model/
+│ ├── train_model.py # Model training script
+│ ├── evaluate_model.py # Model evaluation
+│ ├── model_architecture.py # CNN / ML architecture
+│ ├── saved_model/
+│ │ └── smart_spray_model.h5 # Trained model (or link)
+│ └── requirements.txt
+│
+├── 📁 image_processing/
+│ ├── leaf_segmentation.py # Infected region detection
+│ ├── color_texture_analysis.py
+│ └── preprocessing.py
+│
+├── 📁 iot_control/
+│ ├── sprinkler_control.py # Motor/relay control logic
+│ ├── sensor_interface.py # IoT sensor readings
+│ └── raspberry_pi_setup.md
+│
+├── 📁 hardware/
+│ ├── circuit_diagram.png
+│ ├── component_list.md
+│ └── sprinkler_mechanism.md
+│
+├── 📁 results/
+│ ├── accuracy_graphs.png
+│ ├── output_samples/
+│ └── performance_report.pdf
+│
+├── 📁 docs/
+│ ├── project_overview.md
+│ ├── methodology.md
+│ ├── system_architecture.png
+│ └── future_scope.md
+│
+├── 📁 demo/
+│ ├── demo_video_link.txt
+│ └── screenshots/
+│
+├── 📄 README.md # Main project explanation
+├── 📄 LICENSE
+├── 📄 .gitignore
+└── 📄 requirements.txt
