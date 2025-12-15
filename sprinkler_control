@@ -1,0 +1,28 @@
+import RPi.GPIO as GPIO
+import time
+
+
+GPIO.setmode(GPIO.BCM)
+MOTOR_PIN = 18
+GPIO.setup(MOTOR_PIN, GPIO.OUT)
+
+
+def spray_pesticide(duration):
+GPIO.output(MOTOR_PIN, GPIO.HIGH)
+time.sleep(duration)
+GPIO.output(MOTOR_PIN, GPIO.LOW)
+
+
+# Decision logic
+severity_level = "Medium"
+
+
+if severity_level == "Low":
+spray_pesticide(2)
+elif severity_level == "Medium":
+spray_pesticide(5)
+else:
+spray_pesticide(8)
+
+
+GPIO.cleanup()
